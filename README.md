@@ -30,6 +30,29 @@ How much more runtime do we need as the inputs get larger.
 - `O(n)` = Linear Time Complexity
 - `O(n^2)` = Quadratic Time Complexity
 
+#### Examples
+    const sumUpto = n => {
+        return (n \* (n + 1)) / 2;
+    };
+
+-   The above code executes only 3 operations, no matter how big n is.
+-   So the time complexity for this code would be `O(3)`.
+-   From the rules above, constants does not matter so the complexity is: `O(1)` OR `Constant Time Complexity`
+
+Here is another implementation of the same function:
+
+    const sumUpto2 = n => {
+      let sum = 0;
+      for (let i = 0; i &lt;= n; i++) {
+        sum += i;
+      }
+      return sum;
+    };
+
+-   The above code executes **1** operations, for each value on **n**.
+-   So the time complexity for this code would be `O(1 * n)`.
+-   From the rules above, constants does not matter so the complexity is: `O(n)` OR `Linear Time Complexity`
+
 ---
 
 ## Space Complexity
